@@ -18,67 +18,42 @@ int calculate_length(struct point p1, struct point p2) {
 
     return length;
 }
-int calculate_rectangle_perimeter(int length1, int length2)
-{
-    return length1 * 2 + length2 * 2;
-}
 
-int calculate_rectangle_area(int length1, int length2)
-{
-    return length1 * length2;
-}
-
-int calculate_square_perimeter(int length)
-{
-    return length * 4;
-}
-
-int calculate_square_area(int length)
-{
-    return length * length;
-}
-
-char* determine_rectangle(struct point p1, struct point p2, struct point p3, struct point p4)
-{
+void determine_rectangle(struct point p1, struct point p2, struct point p3, struct point p4) {
     // calculate the lengths of the lines formed by the points
     int length1 = calculate_length(p1, p2);
     int length2 = calculate_length(p2, p3);
     int length3 = calculate_length(p3, p4);
     int length4 = calculate_length(p4, p1);
 
-    char* result = "";
-
     // check if any two lengths are equal
     if (length1 == length2 && length2 == length3 && length3 == length4) {
         // the lines form a square
-        result = "The points form a square.\n";
+        printf("The points form a square.\n");
 
         // calculate the perimeter and area of the square
-        int perimeter = calculate_square_perimeter(length1);
-        int area = calculate_square_area(length1);
+        int perimeter = length1 * 4;
+        int area = length1 * length1;
 
         printf("The perimeter of the square is %d.\n", perimeter);
         printf("The area of the square is %d.\n", area);
     }
     else if (length1 == length3 && length2 == length4) {
         // the lines form a rectangle
-        result = "The points form a rectangle.\n";
+        printf("The points form a rectangle.\n");
 
         // calculate the perimeter and area of the rectangle
-        int perimeter = calculate_rectangle_perimeter(length1, length2);
-        int area = calculate_rectangle_area(length1, length2);
+        int perimeter = length1 * 2 + length2 * 2;
+        int area = length1 * length2;
 
         printf("The perimeter of the rectangle is %d.\n", perimeter);
         printf("The area of the rectangle is %d.\n", area);
     }
     else {
         // the lines do not form a rectangle or square
-        result = "The points do not form a rectangle or square.\n";
+        printf("The points do not form a rectangle or square.\n");
     }
-
-    return result;
 }
-
 
 void get_user_input(struct point* p1, struct point* p2, struct point* p3, struct point* p4) {
     // prompt the user to enter the coordinates for each point
