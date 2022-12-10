@@ -6,7 +6,6 @@ extern "C" struct point {
     int x;
     int y;
 };
-//REQ_001 This test will test the determine rectangle function. It will test for when the input is a square, a rectangle, and when it forms neither.
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
