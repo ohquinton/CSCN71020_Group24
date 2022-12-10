@@ -12,7 +12,7 @@ char* analyzeTriangle(int side1, int side2, int side3)
 	getTriangleAngles(side1, side2, side3);
 	}
 	else {
-		printf_s("It is an invalid triangle");
+		printf_s("It is an invalid triangle ");
 		return 0;
 	}
 	if (side1 <= 0 || side2 <= 0 || side3 <= 0) {

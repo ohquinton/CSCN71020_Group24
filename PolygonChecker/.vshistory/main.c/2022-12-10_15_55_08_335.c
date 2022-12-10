@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
+
 #include "main.h"
 #include "triangleSolver.h"
 #include "Quad.h"
 
-
+int side = 0;
 
 int main() {
 	struct point p1,p2, p3,p4;

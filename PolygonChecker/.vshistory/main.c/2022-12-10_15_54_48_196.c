@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
+
 #include "main.h"
 #include "triangleSolver.h"
 #include "Quad.h"
 
-
+int side = 0;
 
 int main() {
 	struct point p1,p2, p3,p4;
@@ -30,10 +31,10 @@ int main() {
 			get_user_input(&p1, &p2, &p3, &p4);
 
 			// determine if the points form a rectangle or square
-			char* result2 = determine_rectangle(p1, p2, p3, p4);
+			char* result = determine_rectangle(p1, p2, p3, p4);
 
 			// print the result
-			printf("%s", result2);
+			printf("%s", result);
 			break;
 		case 0:
 			continueProgram = false;

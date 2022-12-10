@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
+
 #include "main.h"
 #include "triangleSolver.h"
 #include "Quad.h"
 
-
+int side = 0;
 
 int main() {
 	struct point p1,p2, p3,p4;
@@ -26,14 +27,10 @@ int main() {
 			break;
 		case 2:
 			printf_s("quadrilateral selected.\n");
-			// get the coordinates for the points from the user
+			// get the coordinates for each point from the user
 			get_user_input(&p1, &p2, &p3, &p4);
-
-			// determine if the points form a rectangle or square
-			char* result2 = determine_rectangle(p1, p2, p3, p4);
-
-			// print the result
-			printf("%s", result2);
+			// determine if the points form a rectangle
+			determine_rectangle(p1, p2, p3, p4);
 			break;
 		case 0:
 			continueProgram = false;
