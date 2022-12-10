@@ -47,5 +47,5 @@ int* getTriangleAngles(double side1, double side2, double side3)
 	A = (180 / pi) * asin(side1 / (2 * R));
 	B = (180 / pi) * asin(side2 / (2 * R));
 	C = (180 / pi) * asin(side3 / (2 * R));
-	printf("The angles of this triangle are: %lf %lf %lf\n", A, B, C);
+	printf("The angles of this triangle are: %lf %lf %lf", A, B, C);
 }

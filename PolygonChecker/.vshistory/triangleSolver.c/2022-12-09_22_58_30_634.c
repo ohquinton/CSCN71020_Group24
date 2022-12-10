@@ -7,9 +7,8 @@ char* analyzeTriangle(int side1, int side2, int side3)
 {
 	char* result = "";
 	if ((side1 + side2 > side3) && (side2 + side3 > side1) && (side3 + side1 > side2)) {
-		printf_s("It is a valid triangle\n");
-		
-	getTriangleAngles(side1, side2, side3);
+		printf_s("It is a valid ");
+		getTriangleAngles(side1, side2, side3);
 	}
 	else {
 		printf_s("It is an invalid triangle ");
@@ -19,7 +18,7 @@ char* analyzeTriangle(int side1, int side2, int side3)
 		result = "Not a triangle";
 	}
 	else if (side1 == side2 && side1 == side3) {
-		result = "Equilateral triangle\n";
+		result = "Equilateral triangle";
 	}
 	else if ((side1 == side2 && side1 != side3) || 
 		(side1 == side3 && side1 != side2))
@@ -47,5 +46,5 @@ int* getTriangleAngles(double side1, double side2, double side3)
 	A = (180 / pi) * asin(side1 / (2 * R));
 	B = (180 / pi) * asin(side2 / (2 * R));
 	C = (180 / pi) * asin(side3 / (2 * R));
-	printf("The angles of this triangle are: %lf %lf %lf\n", A, B, C);
+	printf("The angles of this triangle are: %lf %lf %lf", A, B, C);
 }
