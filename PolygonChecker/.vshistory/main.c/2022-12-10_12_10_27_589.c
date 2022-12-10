@@ -8,7 +8,7 @@
 int side = 0;
 
 int main() {
-	struct point p1,p2, p3,p4;
+	struct point p1, p2, p3, p4;
 	bool continueProgram = true;
 	while (continueProgram) {
 		printWelcome();

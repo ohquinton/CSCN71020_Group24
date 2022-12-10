@@ -8,7 +8,7 @@
 int side = 0;
 
 int main() {
-	struct point p1,p2, p3,p4;
+	struct point p1, p2, p3, p4;
 	bool continueProgram = true;
 	while (continueProgram) {
 		printWelcome();
@@ -53,7 +53,6 @@ void printWelcome() {
 
 int printShapeMenu() {
 	printf_s("1. Triangle\n");
-	printf_s("2. Quadrilateral\n");
 	printf_s("0. Exit\n");
 
 	int shapeChoice;
