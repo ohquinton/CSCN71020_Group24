@@ -4,21 +4,13 @@
 #include <stdlib.h>
 #include <math.h>
 
-/*Dominic Szymanski - Quinton Jackson - kaiden Providence - CSCN7020 - Group 24 - 2022/12/01
-Given the Program we implemented a get angle function that will solve for three angles within a trianlge given all three
-sides using sin law cosine law. We then implemented the recatnglefunctions. The first function is for user inputs and takes 4 xy coordiantes as input
-The next function will determine the length of the lines but subtracting the and x/y values by each other then using Pythagorean theorem.
-Those values are then passed to the next which function which to determine whether or not it is a rectangle or square if a square or rectangle
-it will provide the user with the perimeter and area.*/
-
-
 int calculate_length(struct point p1, struct point p2) {
     // calculate the differences between the x and y coordinates of the points
     int x_diff = p1.x - p2.x;
     int y_diff = p1.y - p2.y;
 
     // take the absolute value of the differences
-    x_diff = abs(x_diff); //abs is for absolute value 
+    x_diff = abs(x_diff);
     y_diff = abs(y_diff);
 
     // use the Pythagorean theorem to calculate the length of the line
