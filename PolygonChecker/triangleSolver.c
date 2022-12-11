@@ -11,36 +11,33 @@ it will provide the user with the perimeter and area.*/
 
 
 
+
 char* analyzeTriangle(int side1, int side2, int side3)
 {
-	char* result = "";
+	char* result;
 	if ((side1 + side2 > side3) && (side2 + side3 > side1) && (side3 + side1 > side2)) {
-		printf_s("It is a valid triangle\n");
-		
-	getTriangleAngles(side1, side2, side3);
+		if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
+			result = "Not a triangle";
+		}
+		else if (side1 == side2 && side1 == side3) {
+			result = "Equilateral triangle\n";
+			getTriangleAngles(side1, side2, side3);
+		}
+		else if (side1 == side2 || side1 == side3 || side2 == side3) {
+			result = "Isosceles triangle";
+			getTriangleAngles(side1, side2, side3);
+		}
+		else {
+			result = "Scalene triangle";
+			getTriangleAngles(side1, side2, side3);
+		}
 	}
 	else {
-		printf_s("It is an invalid triangle");
-		return 0;
-	}
-	if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
-		result = "Not a triangle";
-	}
-	else if (side1 == side2 && side1 == side3) {
-		result = "Equilateral triangle\n";
-	}
-	else if ((side1 == side2 && side1 != side3) || 
-		(side1 == side3 && side1 != side2))
-	{
-		result = "Isosceles triangle";
-	}
-	else {
-		result = "Scalene triangle";
+		result = "Invalid triangle";
 	}
 
 	return result;
 }
-
 
 double* getTriangleAngles(double side1, double side2, double side3)
 {
