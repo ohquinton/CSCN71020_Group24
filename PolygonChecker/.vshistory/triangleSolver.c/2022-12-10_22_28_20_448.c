@@ -42,7 +42,7 @@ char* analyzeTriangle(int side1, int side2, int side3)
 }
 
 
-double* getTriangleAngles(double side1, double side2, double side3)
+int* getTriangleAngles(double side1, double side2, double side3)
 {
 	double area, s, A, B, C, R, pi;
 	pi = acos(-1);
